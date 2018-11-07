@@ -35,6 +35,8 @@ public class GameStageTest {
     private Contact contact;
     private World world;
     private SpriteBatch batch;
+    private Animation animationMock;
+    private TextureRegion textureMock;
 
     @BeforeClass
     public static void init() {
@@ -72,6 +74,8 @@ public class GameStageTest {
         contact = Mockito.mock(Contact.class);
         world = new World(Vector2.Zero, true);
         batch = Mockito.mock(SpriteBatch.class);
+        animationMock = Mockito.mock(Animation.class);
+        textureMock = Mockito.mock(TextureRegion.class);
     }
 
     @Test
@@ -80,10 +84,8 @@ public class GameStageTest {
         System.out.println("Working Directory = " +
                 System.getProperty("user.dir"));
 
-        @SuppressWarnings("unchecked")
-        Animation<TextureRegion> animationMock = Mockito.mock(Animation.class);
-        TextureRegion textureMock = Mockito.mock(TextureRegion.class);
-        Runner runner = new Runner(WorldUtils.createRunner(world), animationMock, textureMock, textureMock, textureMock);
+        Runner runner = new Runner(WorldUtils.createRunner(world),
+                animationMock, textureMock, textureMock, textureMock);
         GameStage gameStage = new GameStage(batch, runner);
 
         Body bodyA = Mockito.mock(Body.class);
