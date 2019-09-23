@@ -6,6 +6,10 @@ Added a few tests and made minor changes to the original code.
 
 ## Troubleshooting
 
+### SDK version error
+If you get an error similar to ``Could not target platform: 'Java SE 12' using tool chain: ...``, you need to set the JAVA_HOME environment variable correctly, depending on your local installation.
+On Linux, this can typically be done with ``export JAVA_HOME="<path>"`` where ``<path>`` typically looks like ``/usr/lib/jvm/jdk-12.0.2``
+
 ### Building for Android
 If you want to build for Android, you will need to install the Android SDK and specify the installation path in the Gradle configuration (e.g., by adding a line similar to `sdk.dir=<your_path>/Android/Sdk` in a `local.properties` file at the root of the project).
 
