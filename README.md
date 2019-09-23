@@ -7,7 +7,7 @@ Added a few tests and made minor changes to the original code.
 ## Troubleshooting
 
 ### SDK version error
-If you get an error similar to ``Could not target platform: 'Java SE 12' using tool chain: ...``, you need to set the JAVA_HOME environment variable correctly, depending on your local installation.
+If you get an error similar to ``Could not target platform: 'Java SE 12' using tool chain: ...``, you need to set the JAVA_HOME environment variable correctly, depending on your local installation (of a Java 12 SDK).
 On Linux, this can typically be done with ``export JAVA_HOME="<path>"`` where ``<path>`` typically looks like ``/usr/lib/jvm/jdk-12.0.2``
 
 ### Building for Android
